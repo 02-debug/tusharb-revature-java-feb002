@@ -26,17 +26,18 @@ class UserMainCode{
 
 public class Assignment1 {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		
-		int result = UserMainCode.checkSum(n);
-		
-		if (result == 1) {
-			System.out.println("Sum of odd digits is odd.");
+		try (Scanner sc = new Scanner(System.in)) {
+			int n = sc.nextInt();
 			
-		}
-		else {
-			System.out.println("Sum of odd digits are even.");
+			int result = UserMainCode.checkSum(n);
+			
+			if (result == 1) {
+				System.out.println("Sum of odd digits is odd.");
+				
+			}
+			else {
+				System.out.println("Sum of odd digits are even.");
+			}
 		}
 	}
 
